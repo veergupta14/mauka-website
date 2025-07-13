@@ -1,6 +1,6 @@
 // app/layout.tsx
 
-import "./globals.css";
+import "../app/globals.css"
 import PageTransitionWrapper from "../components/PageTransitionWrapper";
 
 export const metadata = {
