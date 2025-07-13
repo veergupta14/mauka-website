@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { db } from "../firebase";
 import { collection, getDocs } from "firebase/firestore";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from "recharts";
-import { motion } from "framer-motion";
+import { MotionSection } from "@/lib/motion";
 
 export default function AnalyticsDashboard() {
   const [data, setData] = useState<any[]>([]);
@@ -30,7 +30,7 @@ export default function AnalyticsDashboard() {
   }, []);
 
   return (
-    <motion.section
+    <MotionSection
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
@@ -46,6 +46,6 @@ export default function AnalyticsDashboard() {
           <Bar dataKey="count" fill="#F96A0B" radius={[4, 4, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>
-    </motion.section>
+    </MotionSection>
   );
 }

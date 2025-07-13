@@ -7,7 +7,7 @@ import {
   updateDoc,
   doc,
 } from "firebase/firestore";
-import { motion } from "framer-motion";
+import { MotionSection } from "@/lib/motion";
 
 interface Volunteer {
   id: string;
@@ -38,7 +38,7 @@ export default function VolunteerCMS() {
   }, []);
 
   return (
-    <motion.section
+    <MotionSection
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
@@ -89,6 +89,6 @@ export default function VolunteerCMS() {
           </tbody>
         </table>
       </div>
-    </motion.section>
+    </MotionSection>
   );
 }

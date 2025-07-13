@@ -2,7 +2,8 @@
 import { useEffect, useState } from "react";
 import { db } from "../firebase";
 import { collection, getDocs } from "firebase/firestore";
-import { motion } from "framer-motion";
+import { MotionDiv } from "@/lib/motion";
+import { MotionSection } from "@/lib/motion";
 
 interface Certificate {
   name: string;
@@ -23,7 +24,7 @@ export default function CertificateGallery() {
   }, []);
 
   return (
-    <motion.section
+    <MotionSection
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
@@ -34,7 +35,7 @@ export default function CertificateGallery() {
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {certificates.map((cert, idx) => (
-          <motion.div
+          <MotionDiv
             key={idx}
             whileHover={{ scale: 1.03 }}
             className="bg-white rounded-xl shadow-lg overflow-hidden border border-orange-100 hover:shadow-xl transition-all"
@@ -50,9 +51,9 @@ export default function CertificateGallery() {
                 View Certificate
               </a>
             </div>
-          </motion.div>
+          </MotionDiv>
         ))}
       </div>
-    </motion.section>
+    </MotionSection>
   );
 }

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import jsPDF from "jspdf";
-import { motion } from "framer-motion";
+import { MotionDiv } from "@/lib/motion";
 
 export default function PDFGenerator() {
   const [name, setName] = useState("");
@@ -32,7 +32,7 @@ export default function PDFGenerator() {
   };
 
   return (
-    <motion.div
+    <MotionDiv
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
@@ -67,6 +67,6 @@ export default function PDFGenerator() {
       >
         Download PDF
       </button>
-    </motion.div>
+    </MotionDiv>
   );
 }

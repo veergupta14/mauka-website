@@ -1,0 +1,28 @@
+import { motion } from "framer-motion";
+import type { PropsWithChildren } from "react";
+
+export const MotionDiv = motion.div as React.ComponentType<PropsWithChildren<any>>;
+export const MotionSection = motion.section as React.ComponentType<PropsWithChildren<any>>;
+export const MotionSpan = motion.span as React.ComponentType<PropsWithChildren<any>>;
+export const MotionMain = motion.main as React.ComponentType<PropsWithChildren<any>>;
+export const MotionArticle = motion.article as React.ComponentType<PropsWithChildren<any>>;
+export const MotionHeader = motion.header as React.ComponentType<PropsWithChildren<any>>;
+export const MotionFooter = motion.footer as React.ComponentType<PropsWithChildren<any>>;
+export const MotionNav = motion.nav as React.ComponentType<PropsWithChildren<any>>;
+export const MotionH1 = motion.h1 as React.ComponentType<PropsWithChildren<any>>;
+export const MotionH2 = motion.h2 as React.ComponentType<PropsWithChildren<any>>;
+export const MotionH3 = motion.h3 as React.ComponentType<PropsWithChildren<any>>;
+export const MotionH4 = motion.h4 as React.ComponentType<PropsWithChildren<any>>;
+export const MotionH5 = motion.h5 as React.ComponentType<PropsWithChildren<any>>;
+export const MotionH6 = motion.h6 as React.ComponentType<PropsWithChildren<any>>;
+export const MotionP = motion.p as React.ComponentType<PropsWithChildren<any>>;
+export const MotionA = motion.a as React.ComponentType<PropsWithChildren<any>>;
+export const MotionUl = motion.ul as React.ComponentType<PropsWithChildren<any>>;
+export const MotionLi = motion.li as React.ComponentType<PropsWithChildren<any>>;
+export const MotionButton = motion.button as React.ComponentType<PropsWithChildren<any>>;
+export const MotionImg = motion.img as React.ComponentType<PropsWithChildren<any>>;
+export const MotionLabel = motion.label as React.ComponentType<PropsWithChildren<any>>;
+export const MotionForm = motion.form as React.ComponentType<PropsWithChildren<any>>;
+export const MotionInput = motion.input as React.ComponentType<PropsWithChildren<any>>;
+export const MotionTextArea = motion.textarea as React.ComponentType<PropsWithChildren<any>>;
+export const MotionSVG = motion.svg as React.ComponentType<PropsWithChildren<any>>;

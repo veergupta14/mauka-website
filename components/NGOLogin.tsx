@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { initializeApp, getApps } from "firebase/app";
-import { motion } from "framer-motion";
+import { MotionDiv } from "@/lib/motion";
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -38,7 +38,7 @@ export default function NGOLogin() {
   };
 
   return (
-    <motion.div
+    <MotionDiv
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
@@ -80,6 +80,6 @@ export default function NGOLogin() {
           </button>
         </>
       )}
-    </motion.div>
+    </MotionDiv>
   );
 }

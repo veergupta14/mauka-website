@@ -1,4 +1,7 @@
 "use client";
+import { MotionDiv } from "@/lib/motion";
+import { MotionH1 } from "@/lib/motion";
+import { MotionP } from "@/lib/motion";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -7,23 +10,23 @@ export default function HomePage() {
     <main className="bg-[#FFFDF6] text-[#1C1C1C] min-h-screen font-sans">
       {/* HERO SECTION */}
       <section className="min-h-screen flex flex-col justify-center items-center text-center px-6">
-        <motion.h1
+        <MotionH1
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           className="text-5xl md:text-6xl font-bold text-[#F96A0B]"
         >
           This is Their Mauka
-        </motion.h1>
-        <motion.p
+        </MotionH1>
+        <MotionP
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2 }}
           className="mt-6 max-w-xl text-lg text-gray-700"
         >
           We connect students with purpose-driven NGOs to create real, measurable impact across India. One Mauka at a time.
-        </motion.p>
-        <motion.div
+        </MotionP>
+        <MotionDiv
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 1 }}
@@ -41,12 +44,12 @@ export default function HomePage() {
           >
             Admin Login
           </Link>
-        </motion.div>
+        </MotionDiv>
       </section>
 
       {/* MAUKA STATS SECTION */}
       <section className="py-20 px-6 bg-white">
-        <motion.div
+        <MotionDiv
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -72,12 +75,12 @@ export default function HomePage() {
               <p className="text-sm text-gray-600">Shared Purpose</p>
             </div>
           </div>
-        </motion.div>
+        </MotionDiv>
       </section>
 
       {/* CTA SECTION */}
       <section className="py-20 bg-[#F96A0B] text-white text-center px-6">
-        <motion.div
+        <MotionDiv
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -94,7 +97,7 @@ export default function HomePage() {
           >
             Join The Core Team
           </Link>
-        </motion.div>
+        </MotionDiv>
       </section>
     </main>
   );

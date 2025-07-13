@@ -9,7 +9,7 @@ import {
   doc,
   Timestamp,
 } from "firebase/firestore";
-import { motion } from "framer-motion";
+import { MotionDiv } from "@/lib/motion";
 
 interface Testimonial {
   id?: string;
@@ -55,7 +55,7 @@ export default function TestimonialsManager() {
   };
 
   return (
-    <motion.div
+    <MotionDiv
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
@@ -111,6 +111,6 @@ export default function TestimonialsManager() {
           ))}
         </ul>
       </div>
-    </motion.div>
+    </MotionDiv>
   );
 }

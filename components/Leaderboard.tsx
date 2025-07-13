@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { db } from "../firebase";
 import { collection, getDocs, orderBy, query } from "firebase/firestore";
-import { motion } from "framer-motion";
+import { MotionSection } from "@/lib/motion";
 
 interface Volunteer {
   name: string;
@@ -24,7 +24,7 @@ export default function Leaderboard() {
   }, []);
 
   return (
-    <motion.section
+    <MotionSection
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7 }}
@@ -55,6 +55,6 @@ export default function Leaderboard() {
           ))}
         </tbody>
       </table>
-    </motion.section>
+    </MotionSection>
   );
 }

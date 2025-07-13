@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { MotionSection } from "@/lib/motion";
 
 const mockLeaderboard = [
   { name: "Anaya Singh", score: 128, grade: "Grade 11" },
@@ -13,7 +13,7 @@ const mockLeaderboard = [
 export default function LeaderboardPage() {
   return (
     <main className="bg-[#FFFDF6] min-h-screen px-6 py-20 text-[#1C1C1C] font-sans">
-      <motion.section
+      <MotionSection
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -51,7 +51,7 @@ export default function LeaderboardPage() {
             </tbody>
           </table>
         </div>
-      </motion.section>
+      </MotionSection>
     </main>
   );
 }

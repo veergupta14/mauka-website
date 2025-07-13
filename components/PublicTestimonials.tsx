@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { db } from "../firebase";
 import { collection, getDocs } from "firebase/firestore";
-import { motion } from "framer-motion";
+import { MotionSection } from "@/lib/motion";
 
 interface Testimonial {
   name: string;
@@ -23,7 +23,7 @@ export default function PublicTestimonials() {
   }, []);
 
   return (
-    <motion.section
+    <MotionSection
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
@@ -41,6 +41,6 @@ export default function PublicTestimonials() {
           </div>
         ))}
       </div>
-    </motion.section>
+    </MotionSection>
   );
 }

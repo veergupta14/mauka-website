@@ -1,7 +1,7 @@
 
 "use client";
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { MotionSection } from "@/lib/motion";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -13,7 +13,7 @@ export default function ContactPage() {
 
   return (
     <main className="bg-[#FFFDF6] min-h-screen px-6 py-20 text-[#1C1C1C] font-sans">
-      <motion.section
+      <MotionSection
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -81,7 +81,7 @@ export default function ContactPage() {
             <li><strong>Aahvana Kapuria</strong> (Head of Outreach) – akapuria@jpischool.com</li>
           </ul>
         </div>
-      </motion.section>
+      </MotionSection>
     </main>
   );
 }

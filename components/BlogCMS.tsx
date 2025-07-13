@@ -8,7 +8,7 @@ import {
   deleteDoc,
   doc,
 } from "firebase/firestore";
-import { motion } from "framer-motion";
+import { MotionDiv } from "@/lib/motion";
 
 interface Blog {
   id?: string;
@@ -45,7 +45,7 @@ export default function BlogCMS() {
   }, []);
 
   return (
-    <motion.div
+    <MotionDiv
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
@@ -105,6 +105,6 @@ export default function BlogCMS() {
           </div>
         ))}
       </div>
-    </motion.div>
+    </MotionDiv>
   );
 }

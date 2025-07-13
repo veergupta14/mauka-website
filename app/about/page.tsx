@@ -1,10 +1,10 @@
 "use client";
-import { motion } from "framer-motion";
+import { MotionDiv } from "@/lib/motion";
 
 export default function AboutPage() {
   return (
     <main className="bg-[#FFFDF6] min-h-screen px-6 py-20 text-[#1C1C1C] font-sans">
-      <motion.div
+      <MotionDiv
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -35,7 +35,7 @@ export default function AboutPage() {
           you’ve ever wanted to lead change that outlasts you—
           <span className="text-[#F96A0B] font-semibold">this is your Mauka</span>.
         </p>
-      </motion.div>
+      </MotionDiv>
     </main>
   );
 }

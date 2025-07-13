@@ -1,9 +1,9 @@
 
-import { motion } from "framer-motion";
+import { MotionFooter } from "@/lib/motion";
 
 export default function Footer() {
   return (
-    <motion.footer
+    <MotionFooter
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
@@ -12,6 +12,6 @@ export default function Footer() {
       <p className="glow">
         © {new Date().getFullYear()} Mauka Initiative. All rights reserved. Built with 💻 by the Core Team.
       </p>
-    </motion.footer>
+    </MotionFooter>
   );
 }

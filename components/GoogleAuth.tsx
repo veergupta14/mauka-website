@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { getAuth, signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
-import { motion } from "framer-motion";
+import { MotionDiv } from "@/lib/motion";
 import { initializeApp, getApps } from "firebase/app";
 
 const firebaseConfig = {
@@ -35,7 +35,7 @@ export default function GoogleAuth() {
   };
 
   return (
-    <motion.div
+    <MotionDiv
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7 }}
@@ -59,6 +59,6 @@ export default function GoogleAuth() {
           </button>
         </div>
       )}
-    </motion.div>
+    </MotionDiv>
   );
 }

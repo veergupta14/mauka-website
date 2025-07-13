@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { MotionSection } from "@/lib/motion";
 import TestimonialsManager from "../../components/TestimonialsManager";
 import AnalyticsDashboard from "../../components/AnalyticsDashboard";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
@@ -59,7 +59,7 @@ export default function AdminPage() {
 
   return (
     <main className="bg-[#FFFDF6] min-h-screen px-6 py-20 text-[#1C1C1C] font-sans">
-      <motion.section
+      <MotionSection
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -108,7 +108,7 @@ export default function AdminPage() {
         <div className="bg-white rounded-xl p-6 shadow-md min-h-[200px]">
           {renderContent()}
         </div>
-      </motion.section>
+      </MotionSection>
     </main>
   );
 }

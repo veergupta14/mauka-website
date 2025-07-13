@@ -1,7 +1,8 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
+import { MotionDiv } from "@/lib/motion";
 
 export default function PageTransitionWrapper({
   children,
@@ -12,7 +13,7 @@ export default function PageTransitionWrapper({
 
   return (
     <AnimatePresence mode="wait">
-      <motion.div
+      <MotionDiv
         key={path}
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -20,7 +21,7 @@ export default function PageTransitionWrapper({
         transition={{ duration: 0.6 }}
       >
         {children}
-      </motion.div>
+      </MotionDiv>
     </AnimatePresence>
   );
 }

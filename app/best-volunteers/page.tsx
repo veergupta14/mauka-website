@@ -1,10 +1,11 @@
 "use client";
-import { motion } from "framer-motion";
+import { MotionDiv } from "@/lib/motion";
+import { MotionSection } from "@/lib/motion";
 
 export default function BestVolunteersPage() {
   return (
     <main className="bg-[#FFFDF6] min-h-screen px-6 py-20 text-[#1C1C1C] font-sans">
-      <motion.section
+      <MotionSection
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -33,7 +34,7 @@ export default function BestVolunteersPage() {
               impact: "Created Mauka’s digital media kit • 50+ students onboarded",
             },
           ].map((v, i) => (
-            <motion.div
+            <MotionDiv
               key={i}
               whileHover={{ scale: 1.03 }}
               className="bg-white rounded-xl shadow-xl p-6 text-left"
@@ -41,10 +42,10 @@ export default function BestVolunteersPage() {
               <h3 className="text-xl font-semibold text-[#F96A0B] mb-1">{v.name}</h3>
               <p className="text-sm text-gray-600 mb-2">{v.grade}</p>
               <p className="text-gray-800 text-base">{v.impact}</p>
-            </motion.div>
+            </MotionDiv>
           ))}
         </div>
-      </motion.section>
+      </MotionSection>
     </main>
   );
 }

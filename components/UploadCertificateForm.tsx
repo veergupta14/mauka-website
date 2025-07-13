@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { db, storage } from "../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { collection, addDoc, Timestamp } from "firebase/firestore";
-import { motion } from "framer-motion";
+import { MotionDiv } from "@/lib/motion";
 
 export default function UploadCertificateForm() {
   const [file, setFile] = useState<File | null>(null);
@@ -52,7 +52,7 @@ export default function UploadCertificateForm() {
   };
 
   return (
-    <motion.div
+    <MotionDiv
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
@@ -103,6 +103,6 @@ export default function UploadCertificateForm() {
       </button>
 
       {message && <p className="mt-4 font-medium text-center">{message}</p>}
-    </motion.div>
+    </MotionDiv>
   );
 }
