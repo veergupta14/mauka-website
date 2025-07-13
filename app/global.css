@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif;
+  background-color: #FFFDF6;
+  color: #1C1C1C;
+}
+
+/* Custom utility overrides */
+.princeton-gradient {
+  background: linear-gradient(135deg, #f97316, #ffedd5);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f97316;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fff6e5;
+}
+
+/* Link underline hover animation */
+.link-hover-effect {
+  position: relative;
+  display: inline-block;
+}
+
+.link-hover-effect::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #f97316;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: bottom right;
+}
+
+.link-hover-effect:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Fire glow animation */
+.glow {
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 0px rgba(249, 115, 22, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(249, 115, 22, 0.5);
+  }
+}
